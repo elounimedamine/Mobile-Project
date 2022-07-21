@@ -1,29 +1,26 @@
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/signup.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 
-class LoginPage extends StatefulWidget {
+class SuccessResetPasswordPage extends StatefulWidget {
+  const SuccessResetPasswordPage({Key? key}) : super(key: key);
+
   @override
-  _LoginFormValidationState createState() => _LoginFormValidationState();
+  // ignore: library_private_types_in_public_api
+  _SuccessResetPasswordState createState() => _SuccessResetPasswordState();
 }
 
-class _LoginFormValidationState extends State<LoginPage> {
-  GlobalKey<FormState> formkey = GlobalKey<FormState>();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
-
+class _SuccessResetPasswordState extends State<SuccessResetPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Login"),
+        title: const Text("Success Reset Password"),
       ),
       body: SingleChildScrollView(
         child: Form(
           //autovalidateMode: true, //check for validation while typing
-          key: formkey,
           child: Column(
             children: [
               Padding(
@@ -35,65 +32,12 @@ class _LoginFormValidationState extends State<LoginPage> {
                       child: Image.asset('assets/images/flutter-logo.png')),
                 ),
               ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: TextFormField(
-                  controller: _emailController,
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Email',
-                      hintText: 'Enter your email'),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Enter your Email address';
-                    }
-                    if (!RegExp(
-                            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
-                        .hasMatch(value)) {
-                      return 'Enter a Valid Email address';
-                    }
-                    return null;
-                  },
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                    left: 15.0, right: 15.0, top: 15, bottom: 0),
-                child: TextFormField(
-                  controller: _passwordController,
-                  obscureText: true,
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Password',
-                      hintText: 'Enter your password'),
-                  validator: (value) {
-                    // add your custom validation here.
-                    if (value!.isEmpty) {
-                      return 'Please your password';
-                    }
-                    if (value.length < 3) {
-                      return 'Must be more than 2 charater';
-                    }
-                  },
-                  //validatePassword,        //Function to check validation
-                ),
-              ),
               const SizedBox(
                 height: 30,
               ),
-              Align(
-                alignment: Alignment.topRight,
-                child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (_) => HomePage()));
-                  },
-                  child: const Text(
-                    "Forget Password",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
+              const Text(
+                "Success Reset Password",
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 30,
@@ -101,41 +45,17 @@ class _LoginFormValidationState extends State<LoginPage> {
               CupertinoButton(
                 color: CupertinoColors.activeBlue,
                 onPressed: () {
-                  if (formkey.currentState!.validate()) {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (_) => RegisterPage()));
-                    print("Validated");
-                  } else {
-                    print("Not Validated");
-                  }
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => const LoginPage()));
                 },
                 child: const Text(
-                  'Login',
+                  'Back To Login Page',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
               const SizedBox(
                 height: 50,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Don't have an account?",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => RegisterPage()));
-                    },
-                    child: const Text(
-                      "Sign Up",
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),

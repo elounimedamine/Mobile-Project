@@ -1,28 +1,28 @@
+import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/pass_reset/email_verif.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/signup.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/core/homepage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
+  // ignore: library_private_types_in_public_api
   _LoginFormValidationState createState() => _LoginFormValidationState();
 }
 
 class _LoginFormValidationState extends State<LoginPage> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: const Text("Login"),
-      ),
       body: SingleChildScrollView(
         child: Form(
-          //autovalidateMode: true, //check for validation while typing
           key: formkey,
           child: Column(
             children: [
@@ -72,9 +72,10 @@ class _LoginFormValidationState extends State<LoginPage> {
                     if (value!.isEmpty) {
                       return 'Please your password';
                     }
-                    if (value.length < 3) {
-                      return 'Must be more than 2 charater';
+                    if (value.length < 4) {
+                      return 'Must be more than 4 charater';
                     }
+                    return null;
                   },
                   //validatePassword,        //Function to check validation
                 ),
@@ -86,8 +87,11 @@ class _LoginFormValidationState extends State<LoginPage> {
                 alignment: Alignment.topRight,
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (_) => HomePage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) =>
+                                const EmailVerifResetPasswordPage()));
                   },
                   child: const Text(
                     "Forget Password",
@@ -102,8 +106,8 @@ class _LoginFormValidationState extends State<LoginPage> {
                 color: CupertinoColors.activeBlue,
                 onPressed: () {
                   if (formkey.currentState!.validate()) {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (_) => RegisterPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const Acceuil()));
                     print("Validated");
                   } else {
                     print("Not Validated");
@@ -115,7 +119,7 @@ class _LoginFormValidationState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -126,8 +130,10 @@ class _LoginFormValidationState extends State<LoginPage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => RegisterPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (_) => const RegisterPage()));
                     },
                     child: const Text(
                       "Sign Up",
@@ -135,7 +141,7 @@ class _LoginFormValidationState extends State<LoginPage> {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
