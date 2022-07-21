@@ -1,4 +1,4 @@
-# application_from_scratch_flutter_9antra_the_bridge
+# Store App using flutter.
 
 A new Flutter project.
 
