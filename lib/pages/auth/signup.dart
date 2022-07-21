@@ -27,16 +27,19 @@ class _RegisterFormValidationState extends State<RegisterPage> {
           key: formkey,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 60.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 60.0),
                 child: Center(
                   child: SizedBox(
-                      width: 200,
-                      height: 150,
-                      child: Image.asset('assets/images/flutter-logo.png')),
+                    width: 200,
+                    height: 150,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/logo.png'),
+                    ),
+                  ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: TextFormField(

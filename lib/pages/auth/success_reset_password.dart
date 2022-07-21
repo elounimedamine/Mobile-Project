@@ -20,16 +20,18 @@ class _SuccessResetPasswordState extends State<SuccessResetPasswordPage> {
       ),
       body: SingleChildScrollView(
         child: Form(
-          //autovalidateMode: true, //check for validation while typing
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 60.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 60.0),
                 child: Center(
                   child: SizedBox(
-                      width: 200,
-                      height: 150,
-                      child: Image.asset('assets/images/flutter-logo.png')),
+                    width: 200,
+                    height: 150,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/logo.png'),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(
