@@ -63,13 +63,13 @@ class HomeScreen extends StatelessWidget {
                 Navigator.of(context).pop();
               },
             ),
-            ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Paramètres', style: TextStyle(fontSize: 18)),
-              onTap: () {
-                // Here you can give your route to navigate
-              },
-            ),
+            // ListTile(
+            //   leading: const Icon(Icons.settings),
+            //   title: const Text('Paramètres', style: TextStyle(fontSize: 18)),
+            //   onTap: () {
+            //     // Here you can give your route to navigate
+            //   },
+            // ),
             // ListTile(
             //   leading: const Icon(Icons.close),
             //   title:
