@@ -1,6 +1,6 @@
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/models/product.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/core/details_homepage.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/core/details_appbar.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/home/product_cart.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +36,7 @@ class HomeBody extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailsScreen(
+                          builder: (context) => DetailsAppBar(
                             product: products[index],
                           ),
                         ),

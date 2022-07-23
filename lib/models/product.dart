@@ -16,55 +16,55 @@ List<Product> products = [
   Product(
     id: 1,
     price: 59,
-    title: "سماعات لاسلكية",
-    subTitle: "جودة صوت عالية",
+    title: "Ecouteurs sans fil.",
+    subTitle: "Haute qualité sonore.",
     image: "assets/images/airpod.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "Ce sont des écouteurs qui communiquent avec le smartphone ou le PC en mode radio. Ils n'ont donc pas de fil et fonctionnent à l'aide d'une batterie incorporée.",
   ),
   Product(
     id: 2,
     price: 1099,
-    title: "جهاز موبايل",
-    subTitle: "وأصبح للموبايل قوة",
+    title: "Téléphone protable.",
+    subTitle: "Le mobile est devenu puissant.",
     image: "assets/images/mobile.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "C'est un petit appareil téléphonique sans fil avec lequel on peut faire des appels, envoyer des messages, prendre des photos, Il sert aussi de caméra…. Certaines personnes utilisent leurs téléphones portables pour se connecter à Internet.",
   ),
   Product(
     id: 3,
     price: 39,
-    title: "نظارات ثلاثية الأبعاد",
-    subTitle: "لنقلك للعالم الافتراضي",
+    title: "Lunettes 3D.",
+    subTitle: "Pour vous emmener dans le monde virtuel.",
     image: "assets/images/class.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "Paire de lunettes permettant de voir la profondeur dans une vidéo filmée en trois dimensions.",
   ),
   Product(
     id: 4,
     price: 56,
-    title: "سماعات",
-    subTitle: "لساعات استماع طويلة",
+    title: "Écouteurs.",
+    subTitle: "Longues heures d'écoute.",
     image: "assets/images/headset.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "Récepteur électro-acoustique que l'on porte à son oreille pour recevoir une communication ou écouter une émission.",
   ),
   Product(
     id: 5,
     price: 68,
-    title: "مسجل صوت",
-    subTitle: "سجل اللحظات المهمة حولك",
+    title: "Magnétophone.",
+    subTitle: "Enregistrer les moments importants autour de vous.",
     image: "assets/images/speaker.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "Appareil d'enregistrement et de lecture des sons utilisant comme support une bande magnétique (bande ou cassette).",
   ),
   Product(
     id: 6,
     price: 39,
-    title: "كاميرات كمبيوتر",
-    subTitle: "بجودة ودقة صورة عالية",
+    title: "Caméras informatiques.",
+    subTitle: "Haute qualité d'image et résolution.",
     image: "assets/images/camera.png",
     description:
-        "لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو أيوسمود تيمبور أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا.",
+        "Une webcam est une caméra vidéo numérique connectée à un ordinateur et capable de capturer des vidéos et des photos, et de les transmettre sur Internet.",
   ),
 ];

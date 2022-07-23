@@ -96,7 +96,7 @@ class ProductCard extends StatelessWidget {
                           color: kSecondaryColor,
                           borderRadius: BorderRadius.circular(22),
                         ),
-                        child: Text('السعر: \$${product.price}'),
+                        child: Text('Prix: ${product.price} DT'),
                       ),
                     ),
                   ],

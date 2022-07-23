@@ -44,7 +44,7 @@ class DetailsBody extends StatelessWidget {
                 ),
               ),
               Text(
-                'السعر: \$${product.price}',
+                'Prix: ${product.price} DT',
                 style: const TextStyle(
                   fontSize: 28.0,
                   fontWeight: FontWeight.w600,

@@ -3,10 +3,10 @@ import 'package:application_from_scratch_flutter_9antra_the_bridge/models/produc
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/details/details_body.dart';
 import 'package:flutter/material.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsAppBar extends StatelessWidget {
   final Product product;
 
-  const DetailsScreen({Key? key, required this.product}) : super(key: key);
+  const DetailsAppBar({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class DetailsScreen extends StatelessWidget {
       ),
       centerTitle: false,
       title: Text(
-        'رجوع',
+        'Retour',
         style: Theme.of(context).textTheme.bodyText2,
       ),
     );
