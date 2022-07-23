@@ -3,10 +3,10 @@ import 'package:application_from_scratch_flutter_9antra_the_bridge/models/produc
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/details/details_body.dart';
 import 'package:flutter/material.dart';
 
-class DetailsAppBar extends StatelessWidget {
+class DetailsScreen extends StatelessWidget {
   final Product product;
 
-  const DetailsAppBar({Key? key, required this.product}) : super(key: key);
+  const DetailsScreen({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

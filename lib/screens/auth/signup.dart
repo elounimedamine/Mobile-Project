@@ -1,4 +1,4 @@
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/login.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,10 +1,10 @@
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/login.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/login.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/home/home_body.dart';
 import 'package:flutter/material.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

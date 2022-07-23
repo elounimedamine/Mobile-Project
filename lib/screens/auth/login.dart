@@ -1,6 +1,6 @@
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/pass_reset/email_verif.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/auth/signup.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/core/home_appbar.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/pass_reset/email_verif.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/signup.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/pages_screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -110,7 +110,7 @@ class _LoginFormValidationState extends State<LoginPage> {
                 onPressed: () {
                   if (formkey.currentState!.validate()) {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => HomeAppBar()));
+                        MaterialPageRoute(builder: (_) => const HomeScreen()));
                     print("Validated");
                   } else {
                     print("Not Validated");

@@ -1,4 +1,4 @@
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/onboarding.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
 void main() {

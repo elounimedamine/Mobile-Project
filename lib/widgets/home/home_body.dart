@@ -1,6 +1,6 @@
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/models/product.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/core/details_appbar.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/pages_screens/details_screen.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/home/product_cart.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +13,10 @@ class HomeBody extends StatelessWidget {
       bottom: false,
       child: Column(
         children: [
+          // SizedBox de height 10 (20.0/2=10.0)
           const SizedBox(height: kDefaultPadding / 2),
           Expanded(
+            //Stack => pour des objets sur des autres objets
             child: Stack(
               children: [
                 Container(
@@ -36,7 +38,7 @@ class HomeBody extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailsAppBar(
+                          builder: (context) => DetailsScreen(
                             product: products[index],
                           ),
                         ),
