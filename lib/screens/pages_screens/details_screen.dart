@@ -11,10 +11,13 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPrimaryColor,
       appBar: detailsAppBar(context),
-      body: DetailsBody(
-        product: product,
+      body: SingleChildScrollView(
+        child: DetailsBody(
+          product: product,
+        ),
       ),
     );
   }
