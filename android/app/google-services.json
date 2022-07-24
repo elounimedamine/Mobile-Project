@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "48287368318",
+    "project_id": "ecommerceclone-f2cc3",
+    "storage_bucket": "ecommerceclone-f2cc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48287368318:android:adb6fa0af071425730442f",
+        "android_client_info": {
+          "package_name": "tn.kantra.ecm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48287368318-p9v2evtaluu6pmjf1a1kdg1a95pl2c60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLjrt0jCgEVtKI6mttL3wNjS0qgwCtohI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48287368318-p9v2evtaluu6pmjf1a1kdg1a95pl2c60.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "48287368318-r32hcfseh9ao2db9hndt4atbeb4ai1h7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.applicationFromScratchFlutter9antraTheBridge"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

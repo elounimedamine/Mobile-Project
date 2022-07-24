@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.application_from_scratch_flutter_9antra_the_bridge">
+    package="tn.kantra.ecm">
    <application
         android:label="application_from_scratch_flutter_9antra_the_bridge"
         android:name="${applicationName}"
