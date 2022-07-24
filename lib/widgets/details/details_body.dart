@@ -1,5 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/models/product.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/pages_screens/home_screen.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/details/product_image.dart';
 import 'package:flutter/material.dart';
 
@@ -64,6 +67,25 @@ class DetailsBody extends StatelessWidget {
           child: Text(
             product.description,
             style: const TextStyle(color: Colors.white, fontSize: 19.0),
+          ),
+        ),
+        Center(
+          child: Container(
+            height: 50,
+            width: 250,
+            decoration: BoxDecoration(
+                color: kSecondaryColor,
+                borderRadius: BorderRadius.circular(20)),
+            child: FlatButton(
+              onPressed: () {
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (_) => const HomeScreen()));
+              },
+              child: const Text(
+                'Commander',
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
+            ),
           ),
         ),
       ],
