@@ -23,7 +23,6 @@ class _RegisterFormValidationState extends State<RegisterPage> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Form(
-          //autovalidateMode: true, //check for validation while typing
           key: formkey,
           child: Column(
             children: [
@@ -119,7 +118,6 @@ class _RegisterFormValidationState extends State<RegisterPage> {
                       labelText: 'Password',
                       hintText: 'Enter your password'),
                   validator: (value) {
-                    // add your custom validation here.
                     if (value!.isEmpty) {
                       return 'Enter your password please ';
                     }
@@ -128,7 +126,6 @@ class _RegisterFormValidationState extends State<RegisterPage> {
                     }
                     return null;
                   },
-                  //validatePassword,        //Function to check validation
                 ),
               ),
               const SizedBox(

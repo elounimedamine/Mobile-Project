@@ -56,7 +56,6 @@ class _PassChangeFormValidationState extends State<PassChangePage> {
                       return 'Must be more than 4 charater';
                     }
                   },
-                  //validatePassword,        //Function to check validation
                 ),
               ),
               Padding(
@@ -70,7 +69,6 @@ class _PassChangeFormValidationState extends State<PassChangePage> {
                       labelText: 'Confirm Password',
                       hintText: 'Enter your confirm password'),
                   validator: (value) {
-                    // add your custom validation here.
                     if (value!.isEmpty) {
                       return 'Please your confirm password';
                     }
@@ -78,7 +76,6 @@ class _PassChangeFormValidationState extends State<PassChangePage> {
                       return 'Must be more than 4 charater';
                     }
                   },
-                  //validatePassword,        //Function to check validation
                 ),
               ),
               const SizedBox(

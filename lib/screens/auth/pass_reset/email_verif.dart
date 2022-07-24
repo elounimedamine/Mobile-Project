@@ -20,7 +20,6 @@ class _EmailFormValidationState extends State<EmailVerifResetPasswordPage> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Form(
-          //autovalidateMode: true, //check for validation while typing
           key: formkey,
           child: Column(
             children: [

@@ -11,7 +11,7 @@ class Product {
       required this.image});
 }
 
-// list of products
+// liste de produits
 List<Product> products = [
   Product(
     id: 1,

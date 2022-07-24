@@ -71,7 +71,6 @@ class _LoginFormValidationState extends State<LoginPage> {
                       labelText: 'Password',
                       hintText: 'Enter your password'),
                   validator: (value) {
-                    // add your custom validation here.
                     if (value!.isEmpty) {
                       return 'Please your password';
                     }
@@ -80,7 +79,6 @@ class _LoginFormValidationState extends State<LoginPage> {
                     }
                     return null;
                   },
-                  //validatePassword,        //Function to check validation
                 ),
               ),
               const SizedBox(

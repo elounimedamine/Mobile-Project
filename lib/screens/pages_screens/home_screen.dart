@@ -52,38 +52,18 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-            //Here you place your menu items
             ListTile(
               leading: const Icon(Icons.home),
               title:
                   const Text("Page D'acceuil", style: TextStyle(fontSize: 18)),
               onTap: () {
-                // Here you can give your route to navigate
                 Navigator.of(context).pop();
               },
             ),
-            // ListTile(
-            //   leading: const Icon(Icons.settings),
-            //   title: const Text('Paramètres', style: TextStyle(fontSize: 18)),
-            //   onTap: () {
-            //     // Here you can give your route to navigate
-            //   },
-            // ),
-            // ListTile(
-            //   leading: const Icon(Icons.close),
-            //   title:
-            //       const Text('Fermer Drawer', style: TextStyle(fontSize: 18)),
-            //   onTap: () {
-            //     // Here you can give your route to navigate
-            //     Navigator.of(context).pop();
-            //   },
-            // ),
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('Déconnexion', style: TextStyle(fontSize: 18)),
               onTap: () {
-                // Here you can give your route to navigate
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const LoginPage()));
               },
