@@ -1,8 +1,6 @@
 // ignore_for_file: deprecated_member_use
-
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/models/product.dart';
-import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/pages_screens/home_screen.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/details/product_image.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +11,7 @@ class DetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // to provide us the height and the width of the sceen
+    // pour nous fournir la hauteur et la largeur de l'écran
     Size size = MediaQuery.of(context).size;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

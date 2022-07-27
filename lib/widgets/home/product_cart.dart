@@ -17,6 +17,7 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // pour nous fournir la hauteur et la largeur de l'écran
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.symmetric(
