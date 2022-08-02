@@ -1,6 +1,7 @@
 import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/pass_reset/email_verif.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/signup.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/pages_screens/home_screen.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/services/auth_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,8 @@ class _LoginFormValidationState extends State<LoginPage> {
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  final AuthServices _authServices = AuthServices();
 
   @override
   Widget build(BuildContext context) {
@@ -103,22 +106,40 @@ class _LoginFormValidationState extends State<LoginPage> {
               const SizedBox(
                 height: 30,
               ),
-              CupertinoButton(
-                color: CupertinoColors.activeBlue,
-                onPressed: () {
-                  if (formkey.currentState!.validate()) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const HomeScreen()));
-                    print("Validated");
-                  } else {
-                    print("Not Validated");
-                  }
-                },
-                child: const Text(
-                  'Login',
-                  style: TextStyle(color: Colors.white, fontSize: 25),
-                ),
-              ),
+              Row(
+              children: [
+                Expanded(
+                    child: CupertinoButton(
+                        color: Colors.blue,
+                        child: const Text('LOGIN'),
+                        onPressed: () async {
+                          if (_emailController.text.trim().isEmpty ||
+                              _passwordController.text.isEmpty) {
+                            const snackbar = SnackBar(
+                                content:
+                                    Text("Email/Password cannot be empty!"));
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(snackbar);
+                          } else {
+                            dynamic creds = await _authServices.loginUser(
+                                _emailController.text, _passwordController.text);
+                            if (creds == null) {
+                              const snackbar = SnackBar(
+                                  content: Text("Email/Password invalid!"));
+                              // ignore: use_build_context_synchronously
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackbar);
+                            } else {
+                              // ignore: use_build_context_synchronously
+                              Navigator.pushReplacement(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) => const HomeScreen()));
+                            }
+                          }
+                        })),
+              ],
+            ),
               const SizedBox(
                 height: 20,
               ),

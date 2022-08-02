@@ -1,4 +1,6 @@
+import 'package:application_from_scratch_flutter_9antra_the_bridge/models/end_user.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/login.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/services/auth_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +18,8 @@ class _RegisterFormValidationState extends State<RegisterPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
+  final AuthServices _authServices = AuthServices();
 
   @override
   Widget build(BuildContext context) {
@@ -131,22 +135,42 @@ class _RegisterFormValidationState extends State<RegisterPage> {
               const SizedBox(
                 height: 30,
               ),
-              CupertinoButton(
-                color: CupertinoColors.activeBlue,
-                onPressed: () {
-                  if (formkey.currentState!.validate()) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const LoginPage()));
-                    print("Validated");
-                  } else {
-                    print("Not Validated");
-                  }
-                },
-                child: const Text(
-                  'Sign Up',
-                  style: TextStyle(color: Colors.white, fontSize: 25),
-                ),
-              ),
+              Row(
+              children: [
+                Expanded(
+                    child: CupertinoButton(
+                        color: Colors.blue,
+                        child: const Text('SIGN UP'),
+                        onPressed: () async {
+                          EndUser newUser = EndUser(
+                              uid: 'uid',
+                              fullname: _usernameController.text.trim(),
+                              phone: _phoneController.text.trim(),
+                              email: _emailController.text.trim());
+
+                          if (_usernameController.text.trim().isNotEmpty &&
+                              _emailController.text.trim().isNotEmpty &&
+                              _phoneController.text.trim().isNotEmpty &&
+                              _passwordController.text.trim().isNotEmpty) {
+                            dynamic creds = await _authServices.registerUser(
+                                newUser, _passwordController.text.trim());
+                            if (creds == null) {
+                              const snackbar = SnackBar(
+                                  content: Text("Email/Password invalid!"));
+                              // ignore: use_build_context_synchronously
+                              ScaffoldMessenger.of(context)
+                                  .showSnackBar(snackbar);
+                            } else {
+                              // ignore: use_build_context_synchronously
+                              Navigator.pushReplacement(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) => const LoginPage()));
+                            }
+                          }
+                        })),
+              ],
+            ),
               const SizedBox(
                 height: 10,
               ),

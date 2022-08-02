@@ -1,7 +1,11 @@
 import 'package:application_from_scratch_flutter_9antra_the_bridge/constants.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/screens/auth/login.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/services/auth_services.dart';
 import 'package:application_from_scratch_flutter_9antra_the_bridge/widgets/home/home_body.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+AuthServices _authServices = AuthServices();
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -63,9 +67,12 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('Déconnexion', style: TextStyle(fontSize: 18)),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const LoginPage()));
+              onTap: () async {
+                 await _authServices.logout().then((value) =>
+                          Navigator.pushReplacement(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: (context) => const LoginPage())));
               },
             ),
           ],
