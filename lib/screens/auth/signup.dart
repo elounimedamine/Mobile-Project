@@ -138,37 +138,39 @@ class _RegisterFormValidationState extends State<RegisterPage> {
               Row(
               children: [
                 Expanded(
-                    child: CupertinoButton(
-                        color: Colors.blue,
-                        child: const Text('SIGN UP'),
-                        onPressed: () async {
-                          EndUser newUser = EndUser(
-                              uid: 'uid',
-                              fullname: _usernameController.text.trim(),
-                              phone: _phoneController.text.trim(),
-                              email: _emailController.text.trim());
+                    child: Center(
+                      child: CupertinoButton(
+                          color: Colors.blue,
+                          child: const Text('SIGN UP'),
+                          onPressed: () async {
+                            EndUser newUser = EndUser(
+                                uid: 'uid',
+                                fullname: _usernameController.text.trim(),
+                                phone: _phoneController.text.trim(),
+                                email: _emailController.text.trim());
 
-                          if (_usernameController.text.trim().isNotEmpty &&
-                              _emailController.text.trim().isNotEmpty &&
-                              _phoneController.text.trim().isNotEmpty &&
-                              _passwordController.text.trim().isNotEmpty) {
-                            dynamic creds = await _authServices.registerUser(
-                                newUser, _passwordController.text.trim());
-                            if (creds == null) {
-                              const snackbar = SnackBar(
-                                  content: Text("Email/Password invalid!"));
-                              // ignore: use_build_context_synchronously
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(snackbar);
-                            } else {
-                              // ignore: use_build_context_synchronously
-                              Navigator.pushReplacement(
-                                  context,
-                                  CupertinoPageRoute(
-                                      builder: (context) => const LoginPage()));
+                            if (_usernameController.text.trim().isNotEmpty &&
+                                _emailController.text.trim().isNotEmpty &&
+                                _phoneController.text.trim().isNotEmpty &&
+                                _passwordController.text.trim().isNotEmpty) {
+                              dynamic creds = await _authServices.registerUser(
+                                  newUser, _passwordController.text.trim());
+                              if (creds == null) {
+                                const snackbar = SnackBar(
+                                    content: Text("Email/Password invalid!"));
+                                // ignore: use_build_context_synchronously
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackbar);
+                              } else {
+                                // ignore: use_build_context_synchronously
+                                Navigator.pushReplacement(
+                                    context,
+                                    CupertinoPageRoute(
+                                        builder: (context) => const LoginPage()));
+                              }
                             }
-                          }
-                        })),
+                          }),
+                    )),
               ],
             ),
               const SizedBox(

@@ -107,8 +107,9 @@ class _LoginFormValidationState extends State<LoginPage> {
                 height: 30,
               ),
               Row(
-              children: [
-                Expanded(
+                children: [
+                  Expanded(
+                      child: Center(
                     child: CupertinoButton(
                         color: Colors.blue,
                         child: const Text('LOGIN'),
@@ -122,7 +123,8 @@ class _LoginFormValidationState extends State<LoginPage> {
                                 .showSnackBar(snackbar);
                           } else {
                             dynamic creds = await _authServices.loginUser(
-                                _emailController.text, _passwordController.text);
+                                _emailController.text,
+                                _passwordController.text);
                             if (creds == null) {
                               const snackbar = SnackBar(
                                   content: Text("Email/Password invalid!"));
@@ -134,12 +136,14 @@ class _LoginFormValidationState extends State<LoginPage> {
                               Navigator.pushReplacement(
                                   context,
                                   CupertinoPageRoute(
-                                      builder: (context) => const HomeScreen()));
+                                      builder: (context) =>
+                                          const HomeScreen()));
                             }
                           }
-                        })),
-              ],
-            ),
+                        }),
+                  )),
+                ],
+              ),
               const SizedBox(
                 height: 20,
               ),

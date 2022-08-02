@@ -78,7 +78,7 @@ class _EmailFormValidationState extends State<EmailVerifResetPasswordPage> {
                   }
                 },
                 child: const Text(
-                  'Send code',
+                  'Send Code',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
