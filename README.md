@@ -1,4 +1,4 @@
-# Store App using flutter.
+# Messanger App using flutter.
 
 A new Flutter project.
 
