@@ -1,4 +1,4 @@
-# Crud App with Authentification Services using Flutter and Firebase.
+# Store App using flutter.
 
 A new Flutter project.
 
