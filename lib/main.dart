@@ -1,4 +1,4 @@
-import 'package:application_from_scratch_flutter_9antra_the_bridge/pages/root.dart';
+import 'package:application_from_scratch_flutter_9antra_the_bridge/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'theme/color.dart';
@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Messanger',
+        title: 'Crud Application',
         theme: ThemeData(
           primaryColor: primary,
         ),
-        home: const RootApp());
+        home: const SplashScreen());
   }
 }
